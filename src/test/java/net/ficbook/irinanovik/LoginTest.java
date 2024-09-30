@@ -44,6 +44,40 @@ public class LoginTest {
 
         Assertions.assertEquals(expectedTextPassword, actualTextPassword);
     }
+    @Test
+    public void testLoginWithEmptyUsername() {
+
+        HomePage homePage = new HomePage();
+        homePage.open();
+        homePage.clickButtonLogin();
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.inputUsername("");
+        loginPage.inputPassword("eryu");
+        loginPage.clickButtonEnter();
+
+        String actualTextPassword = loginPage.errorPasswordText();
+        String expectedTextPassword = "Логин не существует";
+
+        Assertions.assertEquals(expectedTextPassword, actualTextPassword);
+    }
+    @Test
+    public void testLoginWithEmptyUsernameandPassword() {
+
+        HomePage homePage = new HomePage();
+        homePage.open();
+        homePage.clickButtonLogin();
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.inputUsername("");
+        loginPage.inputPassword("");
+        loginPage.clickButtonEnter();
+
+        String actualTextPassword = loginPage.errorPasswordText();
+        String expectedTextPassword = "Логин не существует";
+
+        Assertions.assertEquals(expectedTextPassword, actualTextPassword);
+    }
 
     @AfterEach
     public void close() {
