@@ -25,10 +25,18 @@ public class LoginPage {
         WebElement inputPassword = driver.findElement(inputPasswordBy);
         inputPassword.sendKeys(password);
     }
+
     public String errorPasswordOrUsernameText() {
-        return
+        return errorText(LoginPageXPath.ERROR_USERNAME_XPATH);
     }
 
     public String errorPasswordText() {
+        return errorText(LoginPageXPath.ERROR_PASSWORD_XPATH);
+    }
+
+    private String errorText(String xpath) {
+        By errorBy = By.xpath(xpath);
+        WebElement error = driver.findElement(errorBy);
+        return error.getText();
     }
 }
