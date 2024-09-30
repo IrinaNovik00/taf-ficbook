@@ -1,27 +1,11 @@
 package net.ficbook.irinanovik.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 public class LoginPageXPath {
-    WebDriver driver;
+    public static final String INPUT_USERNAME_XPATH = "//*[@id=\"username\"]";
+    public static final String INPUT_PASSWORD_XPATH = "//*[@id=\"password\"]";
+    public static final String BUTTON_ENTER_XPATH = "/html/body/div[1]/div/div[2]/div/div[1]/div[2]/form/button";
+    public static final String ERROR_USERNAME_XPATH = "//*[@id=\"username\"],'Логин не существует')]";
+    public static final String ERROR_PASSWORD_XPATH = "//*[@id=\"password\"],'Логин не существует')]";
 
-    public void clickButtonEnter() {
-        By buttonEnterBy = By.xpath(LoginPageXPath.BUTTON_ENTER_XPATH);
-        WebElement buttonEnter = driver.findElement(buttonEnterBy);
-        buttonEnter.click();
-    }
 
-    public void InputUsername(String nickname) {
-        By inputUsernameBy = By.xpath(LoginPageXPath.INPUT_USERNAME_XPATH);
-        WebElement inputUsername = driver.findElement(inputUsernameBy);
-        inputUsername.sendKeys(username);
-    }
-
-    public void inputPassword(String password) {
-        By inputPasswordBy = By.xpath(LoginPageXPath.INPUT_PASSWORD_XPATH);
-        WebElement inputPassword = driver.findElement(inputPasswordBy);
-        inputPassword.sendKeys(password);
-    }
 }

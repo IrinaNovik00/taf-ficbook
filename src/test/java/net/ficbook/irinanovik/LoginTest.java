@@ -24,8 +24,9 @@ public class LoginTest {
         String actualTextPassword = loginPage.errorPasswordOrUsernameText();
         String expectedTextPassword = "Логин не существует";
 
-        Assertions.assertEquals(expectedTextPassword,actualTextPassword);
+        Assertions.assertEquals(expectedTextPassword, actualTextPassword);
     }
+
     @Test
     public void testLoginWithEmptyPassword() {
 
@@ -38,12 +39,11 @@ public class LoginTest {
         loginPage.inputPassword("");
         loginPage.clickButtonEnter();
 
-        String actualTextPassword = loginPage.errorPasswordText().getText();
+        String actualTextPassword = loginPage.errorPasswordText();
         String expectedTextPassword = "Логин не существует";
 
-        Assertions.assertEquals(expectedTextPassword,actualTextPassword);
+        Assertions.assertEquals(expectedTextPassword, actualTextPassword);
     }
-}
 
     @AfterEach
     public void close() {
