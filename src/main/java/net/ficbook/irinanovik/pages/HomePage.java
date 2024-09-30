@@ -1,5 +1,6 @@
-package net.ficbook.irinanovik;
+package net.ficbook.irinanovik.pages;
 
+import net.ficbook.irinanovik.driver.DriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

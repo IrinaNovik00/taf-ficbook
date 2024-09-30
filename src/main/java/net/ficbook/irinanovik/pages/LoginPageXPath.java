@@ -1,4 +1,4 @@
-package net.ficbook.irinanovik;
+package net.ficbook.irinanovik.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

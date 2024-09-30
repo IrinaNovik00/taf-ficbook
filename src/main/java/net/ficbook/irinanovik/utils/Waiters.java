@@ -1,4 +1,4 @@
-package net.ficbook.irinanovik;
+package net.ficbook.irinanovik.utils;
 
 public class Waiters {
     public static void waitFor(int seconds) {

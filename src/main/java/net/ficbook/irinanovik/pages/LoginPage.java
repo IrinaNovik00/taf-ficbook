@@ -1,4 +1,4 @@
-package net.ficbook.irinanovik;
+package net.ficbook.irinanovik.pages;
 
 public class LoginPage {
 
