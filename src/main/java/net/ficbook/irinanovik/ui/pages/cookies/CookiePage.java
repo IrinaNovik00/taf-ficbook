@@ -1,13 +1,13 @@
-package net.ficbook.irinanovik.pages;
+package net.ficbook.irinanovik.ui.pages.cookies;
 
-import net.ficbook.irinanovik.driver.DriverSingleton;
+import net.ficbook.irinanovik.ui.driver.DriverSingleton;
 import net.ficbook.irinanovik.utils.Waiters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CookiePage {
-    WebDriver driver;
+    private WebDriver driver;
 
     public CookiePage() {
         this.driver = DriverSingleton.getDriver();
